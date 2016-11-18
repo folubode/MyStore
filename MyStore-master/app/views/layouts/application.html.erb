@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyStore</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://js.braintreegateway.com/js/braintree-2.24.0.min.js' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<%= render 'shared/header' %>
+	
+	<%= render 'shared/message' %>
+
+  <div class="main-container">
+	
+	<%= yield %>
+
+	<%= render 'shared/footer' %>
+	
+  </div><!-- /.main-container -->
+
+</body>
+</html>

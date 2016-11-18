@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyStore</title>
+  <%= stylesheet_link_tag     'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag     'http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' %>
+  <%= javascript_include_tag  'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- Off screen navigation -->
+      <div id="sidr">
+      <ul>  
+        <li>
+          <%= link_to '#', class: "side-logo" do %>
+            MyStore
+            <span class="logo-dot accent-bg"></span>
+          <% end %>
+        </li>
+        <li class="active">
+          <%= link_to 'Store', root_path %>
+        </li>
+        <li class="divider"><span></span></li>
+        <li>
+          <%= link_to 'Privacy', root_path %>
+          </li>
+        <li>
+          <%= link_to 'Terms & Conditions', root_path %>
+        </li>
+      </ul>
+
+      <div class="side-social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-pinterest"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="nav-container">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navigation" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <%= link_to root_path, class: 'navbar-brand' do %>
+              Store <span class="logo-dot accent-bg"></span>
+            <% end %>
+            <a href="#sidr" class="side-menu-opener mobile">
+              <div class="bars">
+                    <span class="bar top"></span>
+                    <span class="bar middle"></span>
+                    <span class="bar bottom"></span>
+                </div>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="collapse-navigation">
+            <ul class="nav navbar-nav">
+              <li>
+                <%= link_to 'Home', root_path %>
+              </li>
+              <li>
+                <%= link_to 'Store', root_path %>
+              </li>
+              <li>
+                <%= link_to 'About', root_path %>
+              </li>
+              <li>
+                <%= link_to root_path do %>
+                  <i class="fa fa-paper-plane"></i> Contact
+                <% end %>
+              </li>
+              <li>
+                <%= link_to root_path class: 'menu-cart' do %>
+                  <i class="fa fa-shopping-cart"></i> NZ$0.00
+                <% end %>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="#sidr" class="side-menu-opener">
+                  <div class="bars">
+                        <span class="bar top"></span>
+                        <span class="bar middle"></span>
+                        <span class="bar bottom"></span>
+                    </div>
+                </a>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav>
+    </div>
+
+    <div class="main-container">
+      <header class="fullscreen-element">
+        <div class="background-image-holder parallax-background overlay">
+          <%= image_tag('bg-7.jpg', class: 'background-image', alt: 'Background Image') %>
+        </div>
+
+        <div class="container align-vertical hero">
+          <div class="row">
+            <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 text-left">
+              <h1>Modern Store</h1>
+              <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates depudiandae sint et molestiae.</p>
+              <div class="button-group">
+                <%= link_to 'Shop Now', root_path, class: "btn btn-default" %>
+              </div>
+            </div>
+          </div><!--end of row-->
+        </div><!--end of container-->
+      </header>
+
+      <div class="action-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <%= link_to root_path do %>
+                <span data-icon="v" class="icon"></span> <span class="text">Fast Delivery</span>
+              <% end %>
+            </div>
+            <div class="col-sm-4">
+              <%= link_to root_path do %>
+                <span data-icon="/" class="icon"></span> <span class="text">Adjustable</span>
+              <% end %>
+            </div>
+            <div class="col-sm-4">
+              <%= link_to root_path do %>
+                <span data-icon="7" class="icon"></span> <span class="text">Inovative</span>
+              <% end %>
+            </div>
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div>
+
+      <section>
+        <div class="background-image-holder overlay">
+          <%= image_tag("bg-2.jpg", class: "background-image", alt: "Background Image") %>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 text-left">
+              <h2 class="page-title">For your familly</h2>
+              <p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates depudiandae sint et molestiae.</p>
+              <%= link_to 'Shop Now', class: 'btn btn-primary' %>
+            </div>
+          </div><!--end of row-->
+        </div><!--end of container-->
+      </section>
+
+      <section class="products-grid">
+        <div class="container">
+          <div class="row products-container">
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/1.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>Shoes</h3>
+                    <%= link_to root_path, class: 'btn btn-primary' do %>
+                      <i class="fa fa-shopping-cart"></i> Add to cart
+                    <% end %>
+                    <p class="product-price">$90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/2.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>Whiskey</h3>
+                    <%= link_to root_path, class: 'btn btn-primary' do %>
+                      <i class="fa fa-shopping-cart"></i> Add to cart
+                    <% end %>
+                    <p class="product-price">$90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/3.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>Ball</h3>
+                    <%= link_to root_path, class: 'btn btn-primary' do %>
+                      <i class="fa fa-shopping-cart"></i> Add to cart
+                    <% end %>
+                    <p class="product-price">$90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/4.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>Music</h3>
+                    <%= link_to root_path, class: 'btn btn-primary' do %>
+                      <i class="fa fa-shopping-cart"></i> Add to cart
+                    <% end %>
+                    <p class="product-price">$90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/5.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>T-Shirt</h3>
+                    <%= link_to root_path, class: 'btn btn-primary' do %>
+                      <i class="fa fa-shopping-cart"></i> Add to cart
+                    <% end %>
+                    <p class="product-price">$90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/6.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>Glasses</h3>
+                    <%= link_to root_path, class: 'btn btn-primary' do %>
+                      <i class="fa fa-shopping-cart"></i> Add to cart
+                    <% end %>
+                    <p class="product-price">$90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/3.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>Ball</h3>
+                      <%= link_to root_path, class: 'btn btn-primary' do %>
+                        <i class="fa fa-shopping-cart"></i> Add to cart
+                      <% end %>
+                    <p class="product-price">$90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/1.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>Shoes</h3>
+                    <%= link_to root_path, class: 'btn btn-primary' do %>
+                      <i class="fa fa-shopping-cart"></i> Add to cart
+                    <% end %>
+                    <p class="product-price">$90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 product">
+              <div class="thumbnail" style="background-image: url('/assets/products/2.jpg');">
+                <div class="product-details text-center">
+                  <div class="align-vertical">
+                    <h3>Whiskey</h3>
+                    <%= link_to root_path, class: 'btn btn-primary' do %>
+                      <i class="fa fa-shopping-cart"></i> Add to cart
+                    <% end %>
+                    <p class="product-price">$90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+
+      <section>
+        <div class="background-image-holder on-page overlay">
+          <%= image_tag('bg-3.jpg', class: 'background-image', alt: 'Background Image') %>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-7 text-right">
+              <h2 class="page-title">Modern Chair<span class="accent-color">.</span></h2>
+              <p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates depudiandae sint et molestiae.</p>
+              <a href="#" class="btn btn-primary">Shop Now</a>
+            </div>
+          </div><!--end of row-->
+        </div><!--end of container-->
+      </section>
+
+      <section class="newsletter accent-bg">
+        <div class="background-image-holder overlay accent">
+          <%= image_tag('bg-4.jpg', class: "background-image",  alt: "Background Image") %>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 text-left">
+              <h2 class="page-title">Join our newsletter</h2>
+              <p>Bemporibus autem quibusdam et aut officiis debitis autem quibusdam et aut officiis debitis.</p>
+            </div>
+            <div class="col-md-4">
+              <form class="newsletter-form">
+                <input type="text" name="email" id="email" placeholder="Your email address">
+              </form>
+            </div>
+            <div class="col-md-3">
+              <%= link_to 'Join Now', root_path, class: "btn btn-primary" %>
+            </div>
+          </div><!--end of row-->
+        </div><!--end of container-->
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <ul class="footer-navigation">
+                <li class="active">
+                  <%= link_to 'Home', root_path %>
+                </li>
+                <li>
+                  <%= link_to 'Store', root_path %>
+                </li>
+                <li>
+                  <%= link_to 'About', root_path %>
+                </li>
+                <li>
+                  <%= link_to root_path do %>
+                    <i class="fa fa-paper-plane"></i> Contact
+                    <% end %>
+                </li>
+              </ul>
+              <ul class="accepted-payments">
+                <li>
+                  <%= link_to root_path do %>
+                    <i class="fa fa-cc-amex"></i>
+                  <% end %>
+                </li>
+                <li>
+                  <%=link_to root_path do %>
+                    <i class="fa fa-cc-visa"></i>
+                  <% end %> 
+                </li>
+                <li>
+                  <%= link_to root_path do %>
+                    <i class="fa fa-paypal"></i>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to root_path do %>
+                    <i class="fa fa-cc-stripe"></i>
+                    <% end %>
+                </li>
+                <li>
+                  <%= link_to root_path do %>
+                    <i class="fa fa-cc-mastercard"></i>
+                  <% end %>
+                </li>
+              </ul>
+              <div class="copyright">
+                <p>Copyright © 2016. olucube.com</p>
+              </div>
+            </div>
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </footer>
+    </div><!-- /.main-container -->
+    
+<%= yield %>
+
+</body>
+</html>
