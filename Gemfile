@@ -34,7 +34,14 @@ gem 'bootstrap-sass'
 
 gem 'font-awesome-rails'
 
-gem 'sprockets'
+gem 'paperclip'
+
+gem 'activeadmin', github: 'activeadmin'
+
+gem 'devise'
+
+ 
+#gem 'sprockets'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
