@@ -1,1 +1,195 @@
+			<header class="fullscreen-element">
+				<div class="background-image-holder parallax-background overlay">
+					<%= image_tag('bg-7.jpg', class: 'background-image', alt: 'Background Image') %>
+				</div>
 
+				<div class="container align-vertical hero">
+					<div class="row">
+						<div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 text-left">
+							<h1>Modern Store</h1>
+							<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates depudiandae sint et molestiae.</p>
+							<div class="button-group">
+								<%= link_to 'Shop Now', root_path, class: "btn btn-default" %>
+							</div>
+						</div>
+					</div><!--end of row-->
+				</div><!--end of container-->
+			</header>
+
+			<div class="action-bar">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<%= link_to root_path do %>
+								<span data-icon="v" class="icon"></span> <span class="text">Fast Delivery</span>
+							<% end %>
+						</div>
+						<div class="col-sm-4">
+							<%= link_to root_path do %>
+								<span data-icon="/" class="icon"></span> <span class="text">Adjustable</span>
+							<% end %>
+						</div>
+						<div class="col-sm-4">
+							<%= link_to root_path do %>
+								<span data-icon="7" class="icon"></span> <span class="text">Inovative</span>
+							<% end %>
+						</div>
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div>
+
+			<section>
+				<div class="background-image-holder overlay">
+					<%= image_tag("bg-2.jpg", class: "background-image", alt: "Background Image") %>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-5 text-left">
+							<h2 class="page-title">For your familly</h2>
+							<p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates depudiandae sint et molestiae.</p>
+							<%= link_to 'Shop Now', class: 'btn btn-primary' %>
+						</div>
+					</div><!--end of row-->
+				</div><!--end of container-->
+			</section>
+
+			<section class="products-grid">
+				<div class="container">
+					<div class="row products-container">
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/1.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>Shoes</h3>
+										<%= link_to root_path, class: 'btn btn-primary' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
+										<p class="product-price">$90</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/2.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>Whiskey</h3>
+										<%= link_to root_path, class: 'btn btn-primary' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
+										<p class="product-price">$90</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/3.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>Ball</h3>
+										<%= link_to root_path, class: 'btn btn-primary' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
+										<p class="product-price">$90</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/4.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>Music</h3>
+										<%= link_to root_path, class: 'btn btn-primary' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
+										<p class="product-price">$90</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/5.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>T-Shirt</h3>
+										<%= link_to root_path, class: 'btn btn-primary' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
+										<p class="product-price">$90</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/6.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>Glasses</h3>
+										<%= link_to root_path, class: 'btn btn-primary' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
+										<p class="product-price">$90</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/3.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>Ball</h3>
+											<%= link_to root_path, class: 'btn btn-primary' do %>
+												<i class="fa fa-shopping-cart"></i> Add to cart
+											<% end %>
+										<p class="product-price">$90</p>
+								</div>
+							</div>
+						</div>
+					</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/1.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>Shoes</h3>
+										<%= link_to root_path, class: 'btn btn-primary' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
+										<p class="product-price">$90</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/2.jpg');">
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3>Whiskey</h3>
+										<%= link_to root_path, class: 'btn btn-primary' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
+										<p class="product-price">$90</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</section>
+
+			<section>
+				<div class="background-image-holder on-page overlay">
+					<%= image_tag('bg-3.jpg', class: 'background-image', alt: 'Background Image') %>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-5 col-sm-offset-7 text-right">
+							<h2 class="page-title">Modern Chair<span class="accent-color">.</span></h2>
+							<p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates depudiandae sint et molestiae.</p>
+							<a href="#" class="btn btn-primary">Shop Now</a>
+						</div>
+					</div><!--end of row-->
+				</div><!--end of container-->
+			</section>
