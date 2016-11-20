@@ -9,10 +9,15 @@
 </head>
 <body>
 	<%= render 'shared/header' %>
-		<div class="main-container">
-			<%= yield %>
+	<%= render 'shared/message' %>
+	
+	<div class="main-container">
+	
+		<%= yield %>
+		
 		<%= render 'shared/footer' %>
-		</div><!-- /.main-container -->
+	
+	</div><!-- /.main-container -->
 		
 </body>
 </html>

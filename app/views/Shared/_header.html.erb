@@ -64,12 +64,17 @@
 							</li>
 							<li>
 								<%= link_to root_path do %>
-									<i class="fa fa-paper-plane"></i> Contact
+									<i class="fa fa-paper-plane"></i> Contact...
 								<% end %>
 							</li>
 							<li>
-								<%= link_to root_path class: 'menu-cart' do %>
-									<i class="fa fa-shopping-cart"></i> NZ$0.00
+								<% if @cart.total_price > 0 %>
+							  		<%= link_to @cart, class: 'menu-cart' do  %>
+							    		<i class="fa fa-shopping-cart"></i>
+							    		<%= number_to_currency @cart.total_price %>
+						  			<% end %>
+								<% else %>
+						  		<a href="#" class="menu-cart"><i class="fa fa-shopping-cart"></i> $0.00</a>
 								<% end %>
 							</li>
 						</ul>
@@ -77,9 +82,9 @@
 							<li>
 								<a href="#sidr" class="side-menu-opener">
 									<div class="bars">
-								        <span class="bar top"></span>
-								        <span class="bar middle"></span>
-								        <span class="bar bottom"></span>
+								      <span class="bar top"></span>
+								      <span class="bar middle"></span>
+								      <span class="bar bottom"></span>
 								    </div>
 								</a>
 							</li>

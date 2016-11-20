@@ -40,6 +40,8 @@ gem 'activeadmin', github: 'activeadmin'
 
 gem 'devise'
 
+gem 'toastr-rails'
+
  
 #gem 'sprockets'
 
