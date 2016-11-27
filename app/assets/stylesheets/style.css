@@ -607,8 +607,8 @@ input[type="reset"]:focus {
 /* Icon font Linea */
 @font-face {
   font-family: "/assets/linea-basic-10";
-  src: url("/assets/linea-basic-10.eot");
-  src: url("/assets/linea-basic-10.eot?#iefix") format("embedded-opentype"), url("/assets/linea-basic-10.woff") format("woff"), url("/assets/linea-basic-10.ttf") format("truetype"), url("/assets/linea-basic-10.svg#linea-basic-10") format("svg");
+  src: asset-url("linea-basic-10.eot");
+  src: asset-url("linea-basic-10.eot?#iefix") format("embedded-opentype"), asset-url("linea-basic-10.woff") format("woff"), asset-url("linea-basic-10.ttf") format("truetype"), asset-url("linea-basic-10.svg#linea-basic-10") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2207,14 +2207,14 @@ a.load-more {
 /* SLICK CAROUSEL THEME */
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("/assets/ajax-loader.gif") center center no-repeat;
+  background: #fff asset-url("ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url("/assets/slick.eot");
-  src: url("/assets/slick.eot?#iefix") format("embedded-opentype"), url("/assets/slick.woff") format("woff"), url("/assets/slick.ttf") format("truetype"), url("/assets/slick.svg#slick") format("svg");
+  src: asset-url("slick.eot");
+  src: asset-url("slick.eot?#iefix") format("embedded-opentype"), asset-url("slick.woff") format("woff"), asset-url("slick.ttf") format("truetype"), asset-url("slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal;
 }
