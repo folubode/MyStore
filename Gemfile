@@ -42,7 +42,13 @@ gem 'devise'
 
 gem 'toastr-rails'
 
- 
+gem "braintree", "~> 2.69.0"
+
+gem 'figaro'
+
+gem 'country_select'
+
+
 #gem 'sprockets'
 
 # Use ActiveModel has_secure_password

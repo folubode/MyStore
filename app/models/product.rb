@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
 
+#write a method to prevent destroying a product while it's connected to product_item 
 before_destroy :ensure_not_product_item
 
 has_many :product_items

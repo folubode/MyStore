@@ -28,3 +28,38 @@ Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
 - Install boostrap saas
+
+
+Features
+* braintree to process payment
+
+
+
+LOGIC
+Cart
+- product_item model
+* create product_item to connect product to cart
+* write a method to prevent destroying a product while it's connected to product_item 
+
+- Product_Item controller
+* find user's cart from a current session or create one; add product to this cart and display cart's  item(s) by using module CurrentCart
+
+- cart model
+* the create method check if product is in the cart and increament number or add if not yet
+
+Process
+* create product_item controller
+
+
+LOGIC
+Order
+creat order model
+add order_id to product_items
+add Checkout Button to cart show
+* use active_admin construction to show details about customer, order and total price
+
+
+- email notification
+
+
+- integrate Braintree API to process transaction

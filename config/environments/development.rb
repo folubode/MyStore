@@ -16,6 +16,21 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  # Don't actually send email because this is test
+  config.action_mailer.delivery_method = :test
+  
+  # Alternate configuration example, using gmail:
+  #   config.action_mailer.delivery_method = :smtp
+  #   config.action_mailer.smtp_settings = {
+  #     address:        "smtp.gmail.com",
+  #     port:           587, 
+  #     domain:         "your.domain",
+  #     authentication: "plain",
+  #     user_name:      "your_user",
+  #     password:       "your_password",
+  #     enable_starttls_auto: true
+  #   }
+
   # Devise config
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
@@ -41,4 +56,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+Braintree::Configuration.environment = :sandbox
+Braintree::Configuration.merchant_id = ENV['merchant_id']
+Braintree::Configuration.public_key = ENV['public_key']
+Braintree::Configuration.private_key = ENV['private_key']
+
 end

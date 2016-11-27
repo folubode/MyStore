@@ -2,16 +2,16 @@
 	<div class="container">
 		<div class="row products-container">
 			<% @products.each do |product| %>
-				<% if product.id <= 3 %> 
+				<% if product.id <= 12 %> 
 					<div class="col-md-4 col-sm-6 col-xs-12 product">
-						<div class="thumbnail" style="background-image: url('/assets/products/<%= product.image_file_name %>');">
+						<div class="thumbnail" style="background-image: url('<%= product.image %>');">
 							<div class="product-details text-center">
 								<div class="align-vertical">
 									<h3>
 										<%= product.title %>
 									</h3>
-									<%= link_to root_path, class: 'btn btn-primary' do %>
-										<i class="fa fa-shopping-cart"></i> Add to cart
+										<%= button_to product_items_path(product_id: product), class: 'btn btn-default' do %>
+									<i class="fa fa-shopping-cart"></i> Add to cart
 									<% end %>
 									<p class="product-price">
 									<%= number_to_currency product.price %>

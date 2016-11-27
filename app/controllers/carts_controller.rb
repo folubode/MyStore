@@ -1,6 +1,8 @@
 class CartsController < ApplicationController
 
 	before_action :set_cart, only: [:show, :destroy]
+
+	#create invalida cart method to catch error if app cant find cart with id
 	rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
 def new
@@ -28,7 +30,7 @@ private
 	end
 
 	def invalid_cart
-		logger_error "You're trying to access an invalid_cart"
+		logger_error = "You're trying to access an invalid_cart"
 		redirect_to shop_url, notice: 'Invalid Cart'
 	end
 
